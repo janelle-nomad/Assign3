@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
-  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -24,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,7 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -66,7 +68,35 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="Assets\images\BackButton.png" />
+    <Content Include="Assets\images\Banana.png" />
+    <Content Include="Assets\images\Bar.png" />
+    <Content Include="Assets\images\Bell.png" />
+    <Content Include="Assets\images\Bet100Button.png" />
+    <Content Include="Assets\images\Bet10Button.png" />
+    <Content Include="Assets\images\Bet1Button.png" />
+    <Content Include="Assets\images\BlackBackground.png" />
+    <Content Include="Assets\images\Blank.png" />
+    <Content Include="Assets\images\Cherry.png" />
+    <Content Include="Assets\images\Grapes.png" />
+    <Content Include="Assets\images\NextButton.png" />
+    <Content Include="Assets\images\Orange.png" />
+    <Content Include="Assets\images\QuitButton.png" />
+    <Content Include="Assets\images\ResetButton.png" />
+    <Content Include="Assets\images\Seven.png" />
+    <Content Include="Assets\images\slotmachine.png" />
+    <Content Include="Assets\images\slotMachineSymbols.jpg" />
+    <Content Include="Assets\images\slotMachineSymbols2.jpg" />
+    <Content Include="Assets\images\Spin.png" />
+    <Content Include="Assets\images\SpinButton.png" />
+    <Content Include="Assets\images\StartButton.png" />
+    <Content Include="Assets\images\StartOverButton.png" />
+    <Content Include="Assets\images\WhiteBackground.png" />
+    <Content Include="Scripts\config\config.js.map" />
+    <Content Include="Scripts\core\game.js.map" />
+    <Content Include="Scripts\core\_reference.js.map" />
+    <Content Include="Scripts\lib\jquery-2.1.4.min.map" />
+    <Content Include="Assets\images\ImageMap.xlsx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,16 +105,71 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\game.css" />
+    <Content Include="Content\reset.css" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\config\config.js" />
+    <Content Include="Scripts\core\game.js" />
+    <Content Include="Scripts\core\_reference.js" />
+    <Content Include="Scripts\lib\easeljs-0.8.1.min.js" />
+    <Content Include="packages.config" />
+    <None Include="Scripts\lib\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\lib\jquery-2.1.4.js" />
+    <Content Include="Scripts\lib\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\lib\preloadjs-0.6.1.min.js" />
+    <Content Include="Scripts\lib\soundjs-0.6.1.min.js" />
+    <Content Include="Scripts\lib\Stats.js" />
+    <Content Include="Scripts\lib\tweenjs-0.6.1.min.js" />
+    <Content Include="Scripts\objects\asset.js" />
+    <Content Include="Scripts\objects\button.js" />
+    <Content Include="Scripts\objects\label.js" />
+    <Content Include="Scripts\objects\scene.js" />
+    <Content Include="Scripts\scenes\gameover.js" />
+    <Content Include="Scripts\scenes\menu.js" />
+    <Content Include="Scripts\scenes\slotmachine.js" />
     <Content Include="Web.config" />
+    <Content Include="Scripts\objects\asset.js.map" />
+    <Content Include="Scripts\objects\button.js.map" />
+    <Content Include="Scripts\objects\label.js.map" />
+    <Content Include="Scripts\objects\scene.js.map" />
+    <Content Include="Scripts\scenes\gameover.js.map" />
+    <Content Include="Scripts\scenes\menu.js.map" />
+    <Content Include="Scripts\scenes\slotmachine.js.map" />
+    <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\config\config.ts" />
+    <TypeScriptCompile Include="Scripts\core\game.ts" />
+    <TypeScriptCompile Include="Scripts\core\_reference.ts" />
+    <TypeScriptCompile Include="Scripts\objects\asset.ts" />
+    <TypeScriptCompile Include="Scripts\objects\button.ts" />
+    <TypeScriptCompile Include="Scripts\objects\label.ts" />
+    <TypeScriptCompile Include="Scripts\objects\scene.ts" />
+    <TypeScriptCompile Include="Scripts\scenes\gameover.ts" />
+    <TypeScriptCompile Include="Scripts\scenes\menu.ts" />
+    <TypeScriptCompile Include="Scripts\scenes\slotmachine.ts" />
+    <TypeScriptCompile Include="Scripts\typings\createjs-lib\createjs-lib.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\easeljs\easeljs.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\preloadjs\preloadjs.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\soundjs\soundjs.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\stats\stats.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\tsd.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\tweenjs\tweenjs.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
@@ -109,8 +194,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
